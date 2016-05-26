@@ -1,4 +1,4 @@
-window.schema = {
+export default {
   "data": {
     "__schema": {
       "queryType": {

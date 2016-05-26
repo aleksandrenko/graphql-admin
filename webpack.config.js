@@ -1,10 +1,11 @@
 const path = require('path');
 const webpack = require('webpack');
 
-const SRC_FOLDER = path.resolve(__dirname, 'src');
+const sourceFilelFolder = 'app';
+const SRC_FOLDER = path.resolve(__dirname, sourceFilelFolder);
 
 module.exports = {
-  entry: './app/index.js',
+  entry: './' + sourceFilelFolder + '/index.js',
   output: {
     path: 'dist',
     filename: 'bundle.js',
@@ -18,13 +19,6 @@ module.exports = {
     port: 8080
   },
   module: {
-    preLoaders: [
-      {
-        test: /\.js$/,
-        include: SRC_FOLDER,
-        loader: 'eslint'
-      }
-    ],
     loaders: [
       {
         test: /\.js$/,

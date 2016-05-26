@@ -1,4 +1,4 @@
-export default {
+export default `
   "data": {
     "__schema": {
       "queryType": {
@@ -70,7 +70,7 @@ export default {
                 "ofType": {
                   "kind": "SCALAR",
                   "name": "ID",
-                  "description": "The `ID` scalar type represents a unique identifier, often used to refetch an object or as key for a cache. The ID type appears in a JSON response as a String; however, it is not intended to be human-readable. When expected as an input type, any string (such as `\"4\"`) or integer (such as `4`) input value will be accepted as an ID."
+                  "description": "The ID scalar type represents a unique identifier, often used to refetch an object or as key for a cache. The ID type appears in a JSON response as a String; however, it is not intended to be human-readable. When expected as an input type, any string (such as \"4\") or integer (such as 4) input value will be accepted as an ID."
                 }
               }
             },
@@ -79,7 +79,7 @@ export default {
               "type": {
                 "kind": "SCALAR",
                 "name": "String",
-                "description": "The `String` scalar type represents textual data, represented as UTF-8 character sequences. The String type is most often used by GraphQL to represent free-form human-readable text.",
+                "description": "The String scalar type represents textual data, represented as UTF-8 character sequences. The String type is most often used by GraphQL to represent free-form human-readable text.",
                 "ofType": null
               }
             },
@@ -132,13 +132,13 @@ export default {
         {
           "kind": "SCALAR",
           "name": "ID",
-          "description": "The `ID` scalar type represents a unique identifier, often used to refetch an object or as key for a cache. The ID type appears in a JSON response as a String; however, it is not intended to be human-readable. When expected as an input type, any string (such as `\"4\"`) or integer (such as `4`) input value will be accepted as an ID.",
+          "description": "The ID scalar type represents a unique identifier, often used to refetch an object or as key for a cache. The ID type appears in a JSON response as a String; however, it is not intended to be human-readable. When expected as an input type, any string (such as \"4\") or integer (such as 4) input value will be accepted as an ID.",
           "fields": null
         },
         {
           "kind": "SCALAR",
           "name": "String",
-          "description": "The `String` scalar type represents textual data, represented as UTF-8 character sequences. The String type is most often used by GraphQL to represent free-form human-readable text.",
+          "description": "The String scalar type represents textual data, represented as UTF-8 character sequences. The String type is most often used by GraphQL to represent free-form human-readable text.",
           "fields": null
         },
         {
@@ -161,7 +161,7 @@ export default {
                 "ofType": {
                   "kind": "SCALAR",
                   "name": "ID",
-                  "description": "The `ID` scalar type represents a unique identifier, often used to refetch an object or as key for a cache. The ID type appears in a JSON response as a String; however, it is not intended to be human-readable. When expected as an input type, any string (such as `\"4\"`) or integer (such as `4`) input value will be accepted as an ID."
+                  "description": "The ID scalar type represents a unique identifier, often used to refetch an object or as key for a cache. The ID type appears in a JSON response as a String; however, it is not intended to be human-readable. When expected as an input type, any string (such as \"4\") or integer (such as 4) input value will be accepted as an ID."
                 }
               }
             },
@@ -170,7 +170,7 @@ export default {
               "type": {
                 "kind": "SCALAR",
                 "name": "String",
-                "description": "The `String` scalar type represents textual data, represented as UTF-8 character sequences. The String type is most often used by GraphQL to represent free-form human-readable text.",
+                "description": "The String scalar type represents textual data, represented as UTF-8 character sequences. The String type is most often used by GraphQL to represent free-form human-readable text.",
                 "ofType": null
               }
             },
@@ -201,7 +201,7 @@ export default {
               "type": {
                 "kind": "SCALAR",
                 "name": "String",
-                "description": "The `String` scalar type represents textual data, represented as UTF-8 character sequences. The String type is most often used by GraphQL to represent free-form human-readable text.",
+                "description": "The String scalar type represents textual data, represented as UTF-8 character sequences. The String type is most often used by GraphQL to represent free-form human-readable text.",
                 "ofType": null
               }
             },
@@ -236,7 +236,7 @@ export default {
                 "ofType": {
                   "kind": "SCALAR",
                   "name": "ID",
-                  "description": "The `ID` scalar type represents a unique identifier, often used to refetch an object or as key for a cache. The ID type appears in a JSON response as a String; however, it is not intended to be human-readable. When expected as an input type, any string (such as `\"4\"`) or integer (such as `4`) input value will be accepted as an ID."
+                  "description": "The ID scalar type represents a unique identifier, often used to refetch an object or as key for a cache. The ID type appears in a JSON response as a String; however, it is not intended to be human-readable. When expected as an input type, any string (such as 4) or integer (such as 4) input value will be accepted as an ID."
                 }
               }
             },
@@ -249,7 +249,7 @@ export default {
                 "ofType": {
                   "kind": "SCALAR",
                   "name": "String",
-                  "description": "The `String` scalar type represents textual data, represented as UTF-8 character sequences. The String type is most often used by GraphQL to represent free-form human-readable text."
+                  "description": "The String scalar type represents textual data, represented as UTF-8 character sequences. The String type is most often used by GraphQL to represent free-form human-readable text."
                 }
               }
             }
@@ -269,7 +269,7 @@ export default {
                 "ofType": {
                   "kind": "SCALAR",
                   "name": "ID",
-                  "description": "The `ID` scalar type represents a unique identifier, often used to refetch an object or as key for a cache. The ID type appears in a JSON response as a String; however, it is not intended to be human-readable. When expected as an input type, any string (such as `\"4\"`) or integer (such as `4`) input value will be accepted as an ID."
+                  "description": "The ID scalar type represents a unique identifier, often used to refetch an object or as key for a cache. The ID type appears in a JSON response as a String; however, it is not intended to be human-readable. When expected as an input type, any string (such as \"4\") or integer (such as 4) input value will be accepted as an ID."
                 }
               }
             },
@@ -282,7 +282,7 @@ export default {
                 "ofType": {
                   "kind": "SCALAR",
                   "name": "String",
-                  "description": "The `String` scalar type represents textual data, represented as UTF-8 character sequences. The String type is most often used by GraphQL to represent free-form human-readable text."
+                  "description": "The String scalar type represents textual data, represented as UTF-8 character sequences. The String type is most often used by GraphQL to represent free-form human-readable text."
                 }
               }
             },
@@ -320,7 +320,7 @@ export default {
                 "ofType": {
                   "kind": "SCALAR",
                   "name": "ID",
-                  "description": "The `ID` scalar type represents a unique identifier, often used to refetch an object or as key for a cache. The ID type appears in a JSON response as a String; however, it is not intended to be human-readable. When expected as an input type, any string (such as `\"4\"`) or integer (such as `4`) input value will be accepted as an ID."
+                  "description": "The ID scalar type represents a unique identifier, often used to refetch an object or as key for a cache. The ID type appears in a JSON response as a String; however, it is not intended to be human-readable. When expected as an input type, any string (such as \"4\") or integer (such as 4) input value will be accepted as an ID."
                 }
               }
             },
@@ -329,7 +329,7 @@ export default {
               "type": {
                 "kind": "SCALAR",
                 "name": "String",
-                "description": "The `String` scalar type represents textual data, represented as UTF-8 character sequences. The String type is most often used by GraphQL to represent free-form human-readable text.",
+                "description": "The String scalar type represents textual data, represented as UTF-8 character sequences. The String type is most often used by GraphQL to represent free-form human-readable text.",
                 "ofType": null
               }
             },
@@ -342,7 +342,7 @@ export default {
                 "ofType": {
                   "kind": "SCALAR",
                   "name": "String",
-                  "description": "The `String` scalar type represents textual data, represented as UTF-8 character sequences. The String type is most often used by GraphQL to represent free-form human-readable text."
+                  "description": "The String scalar type represents textual data, represented as UTF-8 character sequences. The String type is most often used by GraphQL to represent free-form human-readable text."
                 }
               }
             }
@@ -375,7 +375,7 @@ export default {
                 "ofType": {
                   "kind": "OBJECT",
                   "name": "__Type",
-                  "description": "The fundamental unit of any GraphQL Schema is the type. There are many kinds of types in GraphQL as represented by the `__TypeKind` enum.\n\nDepending on the kind of a type, certain fields describe information about that type. Scalar types provide no information beyond a name and description, while Enum types provide their values. Object and Interface types provide the fields they describe. Abstract types, Union and Interface, provide the Object types possible at runtime. List and NonNull types compose other types."
+                  "description": "The fundamental unit of any GraphQL Schema is the type. There are many kinds of types in GraphQL as represented by the __TypeKind enum.\n\nDepending on the kind of a type, certain fields describe information about that type. Scalar types provide no information beyond a name and description, while Enum types provide their values. Object and Interface types provide the fields they describe. Abstract types, Union and Interface, provide the Object types possible at runtime. List and NonNull types compose other types."
                 }
               }
             },
@@ -384,7 +384,7 @@ export default {
               "type": {
                 "kind": "OBJECT",
                 "name": "__Type",
-                "description": "The fundamental unit of any GraphQL Schema is the type. There are many kinds of types in GraphQL as represented by the `__TypeKind` enum.\n\nDepending on the kind of a type, certain fields describe information about that type. Scalar types provide no information beyond a name and description, while Enum types provide their values. Object and Interface types provide the fields they describe. Abstract types, Union and Interface, provide the Object types possible at runtime. List and NonNull types compose other types.",
+                "description": "The fundamental unit of any GraphQL Schema is the type. There are many kinds of types in GraphQL as represented by the __TypeKind enum.\n\nDepending on the kind of a type, certain fields describe information about that type. Scalar types provide no information beyond a name and description, while Enum types provide their values. Object and Interface types provide the fields they describe. Abstract types, Union and Interface, provide the Object types possible at runtime. List and NonNull types compose other types.",
                 "ofType": null
               }
             },
@@ -393,7 +393,7 @@ export default {
               "type": {
                 "kind": "OBJECT",
                 "name": "__Type",
-                "description": "The fundamental unit of any GraphQL Schema is the type. There are many kinds of types in GraphQL as represented by the `__TypeKind` enum.\n\nDepending on the kind of a type, certain fields describe information about that type. Scalar types provide no information beyond a name and description, while Enum types provide their values. Object and Interface types provide the fields they describe. Abstract types, Union and Interface, provide the Object types possible at runtime. List and NonNull types compose other types.",
+                "description": "The fundamental unit of any GraphQL Schema is the type. There are many kinds of types in GraphQL as represented by the __TypeKind enum.\n\nDepending on the kind of a type, certain fields describe information about that type. Scalar types provide no information beyond a name and description, while Enum types provide their values. Object and Interface types provide the fields they describe. Abstract types, Union and Interface, provide the Object types possible at runtime. List and NonNull types compose other types.",
                 "ofType": null
               }
             },
@@ -415,7 +415,7 @@ export default {
         {
           "kind": "OBJECT",
           "name": "__Type",
-          "description": "The fundamental unit of any GraphQL Schema is the type. There are many kinds of types in GraphQL as represented by the `__TypeKind` enum.\n\nDepending on the kind of a type, certain fields describe information about that type. Scalar types provide no information beyond a name and description, while Enum types provide their values. Object and Interface types provide the fields they describe. Abstract types, Union and Interface, provide the Object types possible at runtime. List and NonNull types compose other types.",
+          "description": "The fundamental unit of any GraphQL Schema is the type. There are many kinds of types in GraphQL as represented by the __TypeKind enum.\n\nDepending on the kind of a type, certain fields describe information about that type. Scalar types provide no information beyond a name and description, while Enum types provide their values. Object and Interface types provide the fields they describe. Abstract types, Union and Interface, provide the Object types possible at runtime. List and NonNull types compose other types.",
           "fields": [
             {
               "name": "kind",
@@ -426,7 +426,7 @@ export default {
                 "ofType": {
                   "kind": "ENUM",
                   "name": "__TypeKind",
-                  "description": "An enum describing what kind of type a given `__Type` is."
+                  "description": "An enum describing what kind of type a given __Type is."
                 }
               }
             },
@@ -435,7 +435,7 @@ export default {
               "type": {
                 "kind": "SCALAR",
                 "name": "String",
-                "description": "The `String` scalar type represents textual data, represented as UTF-8 character sequences. The String type is most often used by GraphQL to represent free-form human-readable text.",
+                "description": "The String scalar type represents textual data, represented as UTF-8 character sequences. The String type is most often used by GraphQL to represent free-form human-readable text.",
                 "ofType": null
               }
             },
@@ -444,7 +444,7 @@ export default {
               "type": {
                 "kind": "SCALAR",
                 "name": "String",
-                "description": "The `String` scalar type represents textual data, represented as UTF-8 character sequences. The String type is most often used by GraphQL to represent free-form human-readable text.",
+                "description": "The String scalar type represents textual data, represented as UTF-8 character sequences. The String type is most often used by GraphQL to represent free-form human-readable text.",
                 "ofType": null
               }
             },
@@ -518,7 +518,7 @@ export default {
               "type": {
                 "kind": "OBJECT",
                 "name": "__Type",
-                "description": "The fundamental unit of any GraphQL Schema is the type. There are many kinds of types in GraphQL as represented by the `__TypeKind` enum.\n\nDepending on the kind of a type, certain fields describe information about that type. Scalar types provide no information beyond a name and description, while Enum types provide their values. Object and Interface types provide the fields they describe. Abstract types, Union and Interface, provide the Object types possible at runtime. List and NonNull types compose other types.",
+                "description": "The fundamental unit of any GraphQL Schema is the type. There are many kinds of types in GraphQL as represented by the __TypeKind enum.\n\nDepending on the kind of a type, certain fields describe information about that type. Scalar types provide no information beyond a name and description, while Enum types provide their values. Object and Interface types provide the fields they describe. Abstract types, Union and Interface, provide the Object types possible at runtime. List and NonNull types compose other types.",
                 "ofType": null
               }
             }
@@ -527,13 +527,13 @@ export default {
         {
           "kind": "ENUM",
           "name": "__TypeKind",
-          "description": "An enum describing what kind of type a given `__Type` is.",
+          "description": "An enum describing what kind of type a given __Type is.",
           "fields": null
         },
         {
           "kind": "SCALAR",
           "name": "Boolean",
-          "description": "The `Boolean` scalar type represents `true` or `false`.",
+          "description": "The Boolean scalar type represents true or false.",
           "fields": null
         },
         {
@@ -550,7 +550,7 @@ export default {
                 "ofType": {
                   "kind": "SCALAR",
                   "name": "String",
-                  "description": "The `String` scalar type represents textual data, represented as UTF-8 character sequences. The String type is most often used by GraphQL to represent free-form human-readable text."
+                  "description": "The String scalar type represents textual data, represented as UTF-8 character sequences. The String type is most often used by GraphQL to represent free-form human-readable text."
                 }
               }
             },
@@ -559,7 +559,7 @@ export default {
               "type": {
                 "kind": "SCALAR",
                 "name": "String",
-                "description": "The `String` scalar type represents textual data, represented as UTF-8 character sequences. The String type is most often used by GraphQL to represent free-form human-readable text.",
+                "description": "The String scalar type represents textual data, represented as UTF-8 character sequences. The String type is most often used by GraphQL to represent free-form human-readable text.",
                 "ofType": null
               }
             },
@@ -585,7 +585,7 @@ export default {
                 "ofType": {
                   "kind": "OBJECT",
                   "name": "__Type",
-                  "description": "The fundamental unit of any GraphQL Schema is the type. There are many kinds of types in GraphQL as represented by the `__TypeKind` enum.\n\nDepending on the kind of a type, certain fields describe information about that type. Scalar types provide no information beyond a name and description, while Enum types provide their values. Object and Interface types provide the fields they describe. Abstract types, Union and Interface, provide the Object types possible at runtime. List and NonNull types compose other types."
+                  "description": "The fundamental unit of any GraphQL Schema is the type. There are many kinds of types in GraphQL as represented by the __TypeKind enum.\n\nDepending on the kind of a type, certain fields describe information about that type. Scalar types provide no information beyond a name and description, while Enum types provide their values. Object and Interface types provide the fields they describe. Abstract types, Union and Interface, provide the Object types possible at runtime. List and NonNull types compose other types."
                 }
               }
             },
@@ -598,7 +598,7 @@ export default {
                 "ofType": {
                   "kind": "SCALAR",
                   "name": "Boolean",
-                  "description": "The `Boolean` scalar type represents `true` or `false`."
+                  "description": "The Boolean scalar type represents true or false."
                 }
               }
             },
@@ -607,7 +607,7 @@ export default {
               "type": {
                 "kind": "SCALAR",
                 "name": "String",
-                "description": "The `String` scalar type represents textual data, represented as UTF-8 character sequences. The String type is most often used by GraphQL to represent free-form human-readable text.",
+                "description": "The String scalar type represents textual data, represented as UTF-8 character sequences. The String type is most often used by GraphQL to represent free-form human-readable text.",
                 "ofType": null
               }
             }
@@ -627,7 +627,7 @@ export default {
                 "ofType": {
                   "kind": "SCALAR",
                   "name": "String",
-                  "description": "The `String` scalar type represents textual data, represented as UTF-8 character sequences. The String type is most often used by GraphQL to represent free-form human-readable text."
+                  "description": "The String scalar type represents textual data, represented as UTF-8 character sequences. The String type is most often used by GraphQL to represent free-form human-readable text."
                 }
               }
             },
@@ -636,7 +636,7 @@ export default {
               "type": {
                 "kind": "SCALAR",
                 "name": "String",
-                "description": "The `String` scalar type represents textual data, represented as UTF-8 character sequences. The String type is most often used by GraphQL to represent free-form human-readable text.",
+                "description": "The String scalar type represents textual data, represented as UTF-8 character sequences. The String type is most often used by GraphQL to represent free-form human-readable text.",
                 "ofType": null
               }
             },
@@ -649,7 +649,7 @@ export default {
                 "ofType": {
                   "kind": "OBJECT",
                   "name": "__Type",
-                  "description": "The fundamental unit of any GraphQL Schema is the type. There are many kinds of types in GraphQL as represented by the `__TypeKind` enum.\n\nDepending on the kind of a type, certain fields describe information about that type. Scalar types provide no information beyond a name and description, while Enum types provide their values. Object and Interface types provide the fields they describe. Abstract types, Union and Interface, provide the Object types possible at runtime. List and NonNull types compose other types."
+                  "description": "The fundamental unit of any GraphQL Schema is the type. There are many kinds of types in GraphQL as represented by the __TypeKind enum.\n\nDepending on the kind of a type, certain fields describe information about that type. Scalar types provide no information beyond a name and description, while Enum types provide their values. Object and Interface types provide the fields they describe. Abstract types, Union and Interface, provide the Object types possible at runtime. List and NonNull types compose other types."
                 }
               }
             },
@@ -658,7 +658,7 @@ export default {
               "type": {
                 "kind": "SCALAR",
                 "name": "String",
-                "description": "The `String` scalar type represents textual data, represented as UTF-8 character sequences. The String type is most often used by GraphQL to represent free-form human-readable text.",
+                "description": "The String scalar type represents textual data, represented as UTF-8 character sequences. The String type is most often used by GraphQL to represent free-form human-readable text.",
                 "ofType": null
               }
             }
@@ -678,7 +678,7 @@ export default {
                 "ofType": {
                   "kind": "SCALAR",
                   "name": "String",
-                  "description": "The `String` scalar type represents textual data, represented as UTF-8 character sequences. The String type is most often used by GraphQL to represent free-form human-readable text."
+                  "description": "The String scalar type represents textual data, represented as UTF-8 character sequences. The String type is most often used by GraphQL to represent free-form human-readable text."
                 }
               }
             },
@@ -687,7 +687,7 @@ export default {
               "type": {
                 "kind": "SCALAR",
                 "name": "String",
-                "description": "The `String` scalar type represents textual data, represented as UTF-8 character sequences. The String type is most often used by GraphQL to represent free-form human-readable text.",
+                "description": "The String scalar type represents textual data, represented as UTF-8 character sequences. The String type is most often used by GraphQL to represent free-form human-readable text.",
                 "ofType": null
               }
             },
@@ -700,7 +700,7 @@ export default {
                 "ofType": {
                   "kind": "SCALAR",
                   "name": "Boolean",
-                  "description": "The `Boolean` scalar type represents `true` or `false`."
+                  "description": "The Boolean scalar type represents true or false."
                 }
               }
             },
@@ -709,7 +709,7 @@ export default {
               "type": {
                 "kind": "SCALAR",
                 "name": "String",
-                "description": "The `String` scalar type represents textual data, represented as UTF-8 character sequences. The String type is most often used by GraphQL to represent free-form human-readable text.",
+                "description": "The String scalar type represents textual data, represented as UTF-8 character sequences. The String type is most often used by GraphQL to represent free-form human-readable text.",
                 "ofType": null
               }
             }
@@ -729,7 +729,7 @@ export default {
                 "ofType": {
                   "kind": "SCALAR",
                   "name": "String",
-                  "description": "The `String` scalar type represents textual data, represented as UTF-8 character sequences. The String type is most often used by GraphQL to represent free-form human-readable text."
+                  "description": "The String scalar type represents textual data, represented as UTF-8 character sequences. The String type is most often used by GraphQL to represent free-form human-readable text."
                 }
               }
             },
@@ -738,7 +738,7 @@ export default {
               "type": {
                 "kind": "SCALAR",
                 "name": "String",
-                "description": "The `String` scalar type represents textual data, represented as UTF-8 character sequences. The String type is most often used by GraphQL to represent free-form human-readable text.",
+                "description": "The String scalar type represents textual data, represented as UTF-8 character sequences. The String type is most often used by GraphQL to represent free-form human-readable text.",
                 "ofType": null
               }
             },
@@ -790,7 +790,7 @@ export default {
                 "ofType": {
                   "kind": "SCALAR",
                   "name": "ID",
-                  "description": "The `ID` scalar type represents a unique identifier, often used to refetch an object or as key for a cache. The ID type appears in a JSON response as a String; however, it is not intended to be human-readable. When expected as an input type, any string (such as `\"4\"`) or integer (such as `4`) input value will be accepted as an ID."
+                  "description": "The ID scalar type represents a unique identifier, often used to refetch an object or as key for a cache. The ID type appears in a JSON response as a String; however, it is not intended to be human-readable. When expected as an input type, any string (such as \"4\") or integer (such as 4) input value will be accepted as an ID."
                 }
               }
             },
@@ -803,7 +803,7 @@ export default {
                 "ofType": {
                   "kind": "SCALAR",
                   "name": "String",
-                  "description": "The `String` scalar type represents textual data, represented as UTF-8 character sequences. The String type is most often used by GraphQL to represent free-form human-readable text."
+                  "description": "The String scalar type represents textual data, represented as UTF-8 character sequences. The String type is most often used by GraphQL to represent free-form human-readable text."
                 }
               }
             },
@@ -835,3 +835,4 @@ export default {
     }
   }
 }
+`

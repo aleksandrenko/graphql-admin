@@ -32,8 +32,11 @@ module.exports = {
       },
       {
         test: /\.less$/,
-        include: SRC_FOLDER,
         loaders: ['style-loader', 'css-loader', 'less-loader']
+      },
+      {
+        test: /\.css$/,
+        loader: "style!css"
       }
     ]
   },

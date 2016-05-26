@@ -19,6 +19,7 @@
   "homepage": "https://github.com/aleksandrenko/apollo-cc#readme",
   "dependencies": {
     "react": "15.0.2",
+    "react-codemirror": "^0.2.6",
     "react-dom": "15.0.2",
     "react-redux": "^4.4.5",
     "react-router": "2.4.0",

@@ -5,11 +5,12 @@ if (!window.fetch) {
   alert(`Your browser does NOT support the fetch api, so you can't use this app.`);
 }
 
-const GRAPHQL_SERVER_URL = 'http://localhost:8081';
 const API = {};
 
+API.URL = 'http://localhost:8081';
+
 API.fetch = (request, callback, error) => {
-  fetch(GRAPHQL_SERVER_URL, {
+  fetch(API.URL, {
     method: 'POST',
     headers: {
       'Accept': 'application/json',

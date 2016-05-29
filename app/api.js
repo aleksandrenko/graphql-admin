@@ -1,5 +1,10 @@
 import { introspectionQuery } from 'graphql';
 
+//test request to get che schema
+if (!window.fetch) {
+  alert(`Your browser does NOT support the fetch api, so you can't use this app.`);
+}
+
 const GRAPHQL_SERVER_URL = 'http://localhost:8081';
 const API = {};
 

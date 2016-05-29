@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/aleksandrenko/apollo-cc#readme",
   "dependencies": {
+    "graphiql": "^0.7.1",
     "graphql": "^0.6.0",
     "react": "15.0.2",
     "react-codemirror": "^0.2.6",

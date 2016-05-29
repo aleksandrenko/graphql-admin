@@ -12,12 +12,6 @@ import store from './store';
 import HomePage from './pages/Home';
 import Error404 from './pages/Error404';
 
-//test request to get che schema
-if (!window.fetch) {
-  alert(`Your browser does NOT support the fetch api, so you can't use this app.`);
-}
-
-
 API.fetchSchema((responce) => {
   console.log(responce);
 });

@@ -9,12 +9,25 @@ import { connect, Provider } from 'react-redux';
 import API from './api';
 import store from './store';
 
+import { buildClientSchema } from 'graphql';
+//import getQueryFacts from '../node_modules/graphiql/dist/utility/getQueryFacts';
+
+API.fetchSchema((resources) => {
+  let schema = buildClientSchema(resources);
+  console.log(schema);
+
+  let typeName = 'Query';
+  console.log('typeName', schema.getType(typeName));
+  console.log('fields', schema.getType(typeName).getFields());
+
+  //let queryFacts = getQueryFacts(schema);
+  //let query = '';
+  //console.log(queryFacts, query);
+});
+
+
 import HomePage from './pages/Home';
 import Error404 from './pages/Error404';
-
-API.fetchSchema((responce) => {
-  console.log(responce);
-});
 
 const routes =
     <Provider store={store}>

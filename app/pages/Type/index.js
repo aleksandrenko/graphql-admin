@@ -22,7 +22,7 @@ const Component = React.createClass({
       const lis = [];
 
       Object.keys(properties).forEach((key) => {
-        lis.push(<li>{ key }: { properties[key].type.ofType.name }</li>);
+        lis.push(<li>{ key }: { properties[key].type.name || properties[key].type.ofType.name }</li>);
       });
 
       return lis;
@@ -31,7 +31,7 @@ const Component = React.createClass({
     return (
       <section>
         Type page: <b>{ this.props.params.type }</b>
-        
+
         <ul>
           { lis(this.getData()) }
         </ul>

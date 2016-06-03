@@ -16,7 +16,7 @@ const reducers = {
       }, state);
   },
   schemaLoaded: (state, action) => {
-    //console.log('schemaLoaded');
+    console.log('schemaLoaded');
 
     return Object.assign({
       loading: false,

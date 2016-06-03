@@ -1,19 +1,10 @@
-const createActions = (actionTypes) => {
-  const _actions = {};
-
-  const createAction = (actionType) => {
-    _actions[actionType] = (_payload) => ({
-      type: actionType,
-      payload: _payload
+export default (actionTypes) => {
+  return actionTypes.reduce((actions, type) => {
+    actions[type] = (payload) => ({
+      type,
+      payload
     });
-  };
 
-  actionTypes.forEach((actionType) => {
-    createAction(actionType);
-  });
-
-  return _actions;
-};
-
-
-export default createActions;
+    return actions;
+  }, {});
+}

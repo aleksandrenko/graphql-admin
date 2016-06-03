@@ -6,33 +6,25 @@ import React from 'react';
 import { Router, Route, browserHistory } from 'react-router';
 import { connect, Provider } from 'react-redux';
 
-import API from './api';
 import store from './store';
-
-import { buildClientSchema } from 'graphql';
-//import getQueryFacts from '../node_modules/graphiql/dist/utility/getQueryFacts';
-
-API.fetchSchema((resources) => {
-  let schema = buildClientSchema(resources);
-  console.log(schema);
-
-  let typeName = 'Query';
-  console.log('typeName', schema.getType(typeName));
-  console.log('fields', schema.getType(typeName).getFields());
-
-  //let queryFacts = getQueryFacts(schema);
-  //let query = '';
-  //console.log(queryFacts, query);
-});
-
+import actions from './actions';
 
 import HomePage from './pages/Home';
 import Error404 from './pages/Error404';
 
+// LOAD THE SCHEME
+store.dispatch(actions.loadShema());
+
+// MAKE CONNECTED COMPNENETS
+const HomePageConnected = connect((_store) => ({
+  schema: _store.schema
+}), actions)(HomePage);
+
+// ROUTES
 const routes =
     <Provider store={store}>
       <Router history={browserHistory}>
-        <Route path="/" component={HomePage}/>
+        <Route path="/" component={HomePageConnected}/>
         <Route path="*" component={Error404}/>
       </Router>
     </Provider>;

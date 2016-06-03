@@ -5,12 +5,12 @@ if (!window.fetch) {
   alert(`Your browser does NOT support the fetch api, so you can't use this app.`);
 }
 
-const API = {};
+const SERVER = {};
 
-API.URL = 'http://localhost:8081';
+SERVER.URL = 'http://localhost:8081';
 
-API.fetch = (request, callback, error) => {
-  fetch(API.URL, {
+SERVER.fetch = (request, callback, error) => {
+  fetch(SERVER.URL, {
     method: 'POST',
     headers: {
       'Accept': 'application/json',
@@ -24,10 +24,10 @@ API.fetch = (request, callback, error) => {
   }).then(function (response) {
     callback(response.data);
   }).catch(function (err) {
-    error(err);
+    error ? error(err) : console.log(err);
   });
 };
 
-API.fetchSchema = (callback, error) => API.fetch(introspectionQuery, callback, error);
+SERVER.fetchSchema = (callback, error) => SERVER.fetch(introspectionQuery, callback, error);
 
-export default API;
+export default SERVER;

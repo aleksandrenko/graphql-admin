@@ -7,7 +7,8 @@ const Component = React.createClass({
   render() {
     return (
       <section>
-        home page
+        home page<br />
+        scheme: '{ this.props.schema && Object.keys(this.props.schema) }'
         <GraphIQL />
       </section>
     );

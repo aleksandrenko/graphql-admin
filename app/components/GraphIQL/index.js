@@ -4,10 +4,10 @@ import '../../../node_modules/graphiql/graphiql.css';
 
 import React from 'react';
 import GraphiQL from 'graphiql';
-import API from '../../api';
+import SERVER from '../../server';
 
 const graphQLFetcher = (graphQLParams) => {
-  return fetch(API.URL, {
+  return fetch(SERVER.URL, {
     method: 'post',
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify(graphQLParams)

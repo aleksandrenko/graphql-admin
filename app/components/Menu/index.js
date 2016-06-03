@@ -43,10 +43,10 @@ const Component = React.createClass({
   render() {
     const url = (item) => `/#`;
 
-    console.log(this.props.items);
+    //console.log(this.props.items);
 
     const lis = this.props.items.map((item, index) => {
-      console.log(item);
+      //console.log(item);
       return <li key={index}><a href={url(item)}>{item}</a></li>;
     });
 

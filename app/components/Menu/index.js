@@ -41,7 +41,7 @@ const Component = React.createClass({
   // },
 
   render() {
-    const url = (item) => `/#`;
+    const url = (item) => `/types/${item}/`;
 
     //console.log(this.props.items);
 

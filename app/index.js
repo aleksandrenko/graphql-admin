@@ -10,6 +10,7 @@ import store from './store';
 import actionReducers from './reducers';
 
 import HomePage from './pages/Home';
+import TypePage from './pages/Type';
 import Error404 from './pages/Error404';
 
 const actions = actionReducers.actions;
@@ -27,8 +28,9 @@ const HomePageConnected = connect((_store) => ({
 const routes =
     <Provider store={store}>
       <Router history={browserHistory}>
-        <Route path="/" component={HomePageConnected}/>
-        <Route path="*" component={Error404}/>
+        <Route path="/" component={HomePageConnected} />
+        <Route path="/types/:type" component={TypePage} />
+        <Route path="*" component={Error404} />
       </Router>
     </Provider>;
 

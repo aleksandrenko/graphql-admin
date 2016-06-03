@@ -17,7 +17,8 @@ store.dispatch(actions.loadShema());
 
 // MAKE CONNECTED COMPNENETS
 const HomePageConnected = connect((_store) => ({
-  schema: _store.schema
+  schema: _store.schema,
+  loading: _store.loading
 }), actions)(HomePage);
 
 // ROUTES

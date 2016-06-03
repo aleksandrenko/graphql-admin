@@ -13,11 +13,16 @@ const reducers = {
         store.dispatch(actions.schemaLoaded(schema));
       });
 
-      return state;
+      return Object.assign({
+        loading: true
+      }, state);
   },
   'SCHEMA_LOADED': (state, action) => {
     console.log('SCHEMA_LOADED');
-    return { schema: action.payload }
+    return Object.assign({
+      loading: false,
+      schema: action.payload
+    });
   }
 };
 

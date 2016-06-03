@@ -7,7 +7,8 @@ const rootReducer = (state, action) => {
 };
 
 const store = createStore(rootReducer, {
-  schema: null
+  schema: null,
+  loading: false
 });
 
 export default store;

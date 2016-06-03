@@ -7,19 +7,21 @@ import { Router, Route, browserHistory } from 'react-router';
 import { connect, Provider } from 'react-redux';
 
 import store from './store';
-import actions from './actions';
+import actionReducers from './reducers';
 
 import HomePage from './pages/Home';
 import Error404 from './pages/Error404';
 
-// LOAD THE SCHEME
-store.dispatch(actions.loadShema());
+const actions = actionReducers.actions;
 
-// MAKE CONNECTED COMPNENETS
+// LOAD THE SCHEME
+store.dispatch(actions.loadSchema());
+
+// MAKE CONNECTED PAGES
 const HomePageConnected = connect((_store) => ({
   schema: _store.schema,
   loading: _store.loading
-}), actions)(HomePage);
+}), actionReducers.actions)(HomePage);
 
 // ROUTES
 const routes =

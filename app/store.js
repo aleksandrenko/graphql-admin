@@ -1,6 +1,8 @@
 
 import { createStore } from 'redux';
-import reducers from './reducers';
+import reduceActions from './reducers';
+
+const reducers = reduceActions.reducers;
 
 const rootReducer = (state, action) => {
   return reducers[action.type] ? reducers[action.type](state, action) : state;

@@ -1,13 +1,11 @@
-import actions from './actions';
 import store from './store';
+import createActions from './utils/createActions';
 
 import { buildClientSchema } from 'graphql';
 import SERVER from './server';
 
 const reducers = {
-  'SCHEMA_LOADING': (state, action) => {
-      //console.log('SCHEMA_LOADING');
-
+  loadSchema: (state, action) => {
       SERVER.fetchSchema((resources) => {
         let schema = buildClientSchema(resources);
         store.dispatch(actions.schemaLoaded(schema));
@@ -17,8 +15,9 @@ const reducers = {
         loading: true
       }, state);
   },
-  'SCHEMA_LOADED': (state, action) => {
-    console.log('SCHEMA_LOADED');
+  schemaLoaded: (state, action) => {
+    //console.log('schemaLoaded');
+
     return Object.assign({
       loading: false,
       schema: action.payload
@@ -26,4 +25,10 @@ const reducers = {
   }
 };
 
-export default reducers;
+// create generic actions for all keys in the reducers
+const actions = createActions(Object.keys(reducers));
+
+export default {
+  reducers,
+  actions
+};

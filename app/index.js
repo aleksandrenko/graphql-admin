@@ -22,14 +22,18 @@ store.dispatch(actions.loadSchema());
 const HomePageConnected = connect((_store) => ({
   schema: _store.schema,
   loading: _store.loading
-}), actionReducers.actions)(HomePage);
+}), actions)(HomePage);
+
+const TypePageConnected = connect((_store) => ({
+  schema: _store.schema
+}), actions)(TypePage);
 
 // ROUTES
 const routes =
     <Provider store={store}>
       <Router history={browserHistory}>
         <Route path="/" component={HomePageConnected} />
-        <Route path="/types/:type" component={TypePage} />
+        <Route path="/types/:type" component={TypePageConnected} />
         <Route path="*" component={Error404} />
       </Router>
     </Provider>;

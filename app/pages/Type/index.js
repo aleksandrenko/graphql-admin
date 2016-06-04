@@ -57,7 +57,7 @@ const Component = React.createClass({
             responce[type].forEach((entry) => {
               responceDom.push(<div>----------------------------------------------------------------------------</div>);
               Object.keys(entry).forEach((key) => {
-                responceDom.push(<div>{key}: { entry[key].id || entry[key] }</div>);
+                responceDom.push(<div>{key}: { entry[key] && (entry[key].id || entry[key]) }</div>);
               });
             });
             responceDom.push(<div>----------------------------------------------------------------------------</div>);

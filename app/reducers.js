@@ -6,17 +6,17 @@ import SERVER from './server';
 
 const reducers = {
   loadSchema: (state, action) => {
-      SERVER.fetchSchema((resources) => {
-        let schema = buildClientSchema(resources);
-        store.dispatch(actions.schemaLoaded(schema));
-      });
+    SERVER.fetchSchema((resources) => {
+      let schema = buildClientSchema(resources);
+      store.dispatch(actions.schemaLoaded(schema));
+    });
 
-      return Object.assign({
-        loading: true
-      }, state);
+    return Object.assign({
+      loading: true
+    }, state);
   },
   schemaLoaded: (state, action) => {
-    console.log('schemaLoaded');
+    //console.log('schemaLoaded');
 
     return Object.assign({
       loading: false,

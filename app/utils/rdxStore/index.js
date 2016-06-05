@@ -1,6 +1,49 @@
 import { createStore } from 'redux';
-import getTypes from './utils/getTypes';
-import generateActions from './utils/generateActions';
+
+
+const NOT_ALLOWED_TYPES = [
+  'dispatch',
+  'getstate',
+  'replaceReducer',
+  'subscribe',
+  'symbol'
+];
+
+/**
+ *
+ * @param {Array} reducers
+ * @returns {Array} types
+ * @private
+ */
+const getTypes = (reducers) => {
+  return reducers.reduce((acc, reducer) => {
+    const _type = Object.keys(reducer)[0];
+
+    if (NOT_ALLOWED_TYPES.indexOf(_type.toLowerCase()) !== -1 ) {
+      throw Error(`rdxStore can not accept reducer named "${_type}".`);
+    }
+
+    acc.push(_type);
+    return acc;
+  }, []);
+};
+
+/**
+ *
+ * @param types
+ * @returns {*}
+ * @private
+ */
+const generateActions = (types) => {
+  return types.reduce((actions, type) => {
+    actions[type] = (payload) => ({
+      type,
+      payload
+    });
+
+    return actions;
+  }, {});
+};
 
 /**
  * @param state

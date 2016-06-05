@@ -1,16 +1,31 @@
+import rdxStore from './utils/rdxStore';
 
-import { createStore } from 'redux';
-import reduceActions from './reducers';
+import { buildClientSchema } from 'graphql';
+import SERVER from './server';
 
-const reducers = reduceActions.reducers;
+const store = rdxStore({
+      schema: null,
+      loading: false
+    }, [
+      {
+        loadSchema: (state, action) => {
+          SERVER.fetchSchema((resources) => {
+            let schema = buildClientSchema(resources);
+            store.schemaLoaded(schema);
+          });
 
-const rootReducer = (state, action) => {
-  return reducers[action.type] ? reducers[action.type](state, action) : state;
-};
-
-const store = createStore(rootReducer, {
-  schema: null,
-  loading: false
-});
+          return Object.assign({
+            loading: true
+          }, state);
+        }
+      }, {
+        schemaLoaded: (state, action) => {
+          return Object.assign({
+            loading: false,
+            schema: action.payload
+          });
+        }
+      }
+    ]);
 
 export default store;

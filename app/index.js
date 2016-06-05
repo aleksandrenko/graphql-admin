@@ -3,38 +3,39 @@ import './styles.less'
 import ReactDOM from 'react-dom';
 import React from 'react';
 
+import store from './store';
+
 import { Router, Route, browserHistory } from 'react-router';
 import { connect, Provider } from 'react-redux';
-
-import store from './store';
-import actionReducers from './reducers';
 
 import HomePage from './pages/Home';
 import TypePage from './pages/Type';
 import Error404 from './pages/Error404';
 
-const actions = actionReducers.actions;
+console.log(store);
 
 // LOAD THE SCHEME
-store.dispatch(actions.loadSchema());
+store.loadSchema();
 
 // MAKE CONNECTED PAGES
-const HomePageConnected = connect((_store) => ({
-  schema: _store.schema,
-  loading: _store.loading
-}), actions)(HomePage);
+const HomePageConnected = connect((store) => {
+  return {
+    schema: store.schema,
+    loading: store.loading
+  }
+})(HomePage);
 
-const TypePageConnected = connect((_store) => ({
-  schema: _store.schema
-}), actions)(TypePage);
+const TypePageConnected = connect((store) => ({
+  schema: store.schema
+}))(TypePage);
 
 // ROUTES
 const routes =
     <Provider store={store}>
       <Router history={browserHistory}>
-        <Route path="/" component={HomePageConnected} />
-        <Route path="/types/:type" component={TypePageConnected} />
-        <Route path="*" component={Error404} />
+        <Route path="/" component={HomePageConnected}/>
+        <Route path="/types/:type" component={TypePageConnected}/>
+        <Route path="*" component={Error404}/>
       </Router>
     </Provider>;
 

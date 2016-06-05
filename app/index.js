@@ -12,22 +12,23 @@ import HomePage from './pages/Home';
 import TypePage from './pages/Type';
 import Error404 from './pages/Error404';
 
-console.log(store);
+
+import { createStore } from 'redux';
+
+const _store = createStore((state, action) => state, { schema: {} });
 
 // LOAD THE SCHEME
 store.loadSchema();
 
 // MAKE CONNECTED PAGES
-const HomePageConnected = connect((store) => {
-  return {
-    schema: store.schema,
-    loading: store.loading
-  }
-})(HomePage);
+const HomePageConnected = connect((store) => ({
+  schema: store.schema,
+  loading: store.loading
+}), store._actions)(HomePage);
 
 const TypePageConnected = connect((store) => ({
   schema: store.schema
-}))(TypePage);
+}), store._actions)(TypePage);
 
 // ROUTES
 const routes =

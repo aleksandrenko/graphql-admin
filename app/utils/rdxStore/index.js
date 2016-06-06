@@ -6,7 +6,8 @@ const NOT_ALLOWED_TYPES = [
   'getstate',
   'replaceReducer',
   'subscribe',
-  'symbol'
+  'symbol',
+  'mapStoreToProps'
 ];
 
 /**
@@ -19,7 +20,7 @@ const getTypes = (reducers) => {
   return reducers.reduce((acc, reducer) => {
     const _type = Object.keys(reducer)[0];
 
-    if (NOT_ALLOWED_TYPES.indexOf(_type.toLowerCase()) !== -1 ) {
+    if (NOT_ALLOWED_TYPES.indexOf(_type.toLowerCase()) !== -1) {
       throw Error(`rdxStore can not accept reducer named "${_type}".`);
     }
 
@@ -82,6 +83,9 @@ const rdxStore = (initialState = {}, reducers = []) => {
   const allTypes = getTypes(reducers);
 
   const actions = store._actions = generateActions(allTypes);
+
+  // used as second param to connect function from redux-react
+  store.mapStoreToProps = (dispatch) => ({ store });
 
   // Add Action Methods directly to the store
   allTypes.forEach((type) => {

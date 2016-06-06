@@ -26,6 +26,7 @@ const Component = React.createClass({
         scheme: '{ this.props.schema && Object.keys(this.props.schema) }'
         <br /><br />
         { console.log('schema: ', this.props.schema) }
+        { console.log('props: ', this.props) }
         Schema types:
         <Menu items={ this.props.schema ? Object.keys(this.props.schema._typeMap) : [] } />
         <br />

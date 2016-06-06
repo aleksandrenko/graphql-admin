@@ -24,11 +24,11 @@ store.loadSchema();
 const HomePageConnected = connect((store) => ({
   schema: store.schema,
   loading: store.loading
-}), store._actions)(HomePage);
+}), store.mapStoreToProps)(HomePage);
 
 const TypePageConnected = connect((store) => ({
   schema: store.schema
-}), store._actions)(TypePage);
+}), store.mapStoreToProps)(TypePage);
 
 // ROUTES
 const routes =

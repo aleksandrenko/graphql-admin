@@ -1,0 +1,207 @@
+html {
+  font-family: "Myriad Set Pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 0.8rem;
+  background: #edeff5;
+}
+
+body {
+  margin: 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+a {
+  cursor: pointer;
+  text-decoration: none;
+}
+
+/* */
+
+cc {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+/* */
+
+cc > header {
+  display: flex;
+  align-items: center;
+  padding-bottom: 25px;
+}
+
+/* */
+
+cc logo {
+  width: 120px;
+}
+
+cc logo::after {
+  content: 'command center';
+  display: block;
+  color: #97989a;
+  line-height: 50%;
+  font-size: 0.9rem;
+}
+
+cc logo::before {
+  content: 'CC';
+  color: #6c6d71;
+  font-weight: 500;
+  font-size: 1rem;
+}
+
+/* */
+
+cc nav {
+  flex: 1;
+}
+
+cc nav a {
+  font-size: 0.9rem;
+  opacity: 0.5;
+  color: #3a3b3d;
+  padding: 5px 15px;
+  transition: 0.2s opacity;
+}
+
+cc nav a:hover {
+  opacity: 0.8;
+}
+
+cc nav a.selected {
+  opacity: 1;
+}
+
+/* */
+
+cc settings {
+  width: 20px;
+}
+
+/* */
+
+cc > main {
+  flex: 1;
+  position: relative;
+}
+
+/* */
+
+cc list {
+  display: flex;
+  flex-wrap: wrap;
+  margin: -5px;
+}
+
+cc list > * {
+  margin: 5px;
+}
+
+  /* */
+
+cc list item {
+  background: #fff;
+  border-radius: 3px;
+  min-width: 300px;
+  display: flex;
+}
+
+cc list item aside {
+  width: 50px;
+  background: #fbfbfb;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+cc list item aside count {
+  background: #666;
+  padding: 6px;
+  border-radius: 50%;
+  display: inline-block;
+  color: #fff;
+  font-size: 0.85rem;
+}
+
+cc list item section {
+  padding: 15px;
+}
+
+cc list item section header {
+  display: block;
+  font-size: 1rem;
+}
+
+cc list item section small {
+  display: block;
+  opacity: 0.4;
+}
+
+/* */
+
+tabs {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0; 
+}
+
+tabs > tab-links {
+  padding: 0 10px;
+  display: flex;
+}
+
+tabs > tab-links tab {
+  padding: 0 5px 5px 0;
+  min-width: 100px;
+  border-bottom: solid 2px #aaa;
+  color: #333;
+  margin-right: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  cursor: pointer;
+  transition: opacity 0.2s;
+  opacity: 0.5;
+}
+
+tabs > tab-links tab small {
+  display: block;
+  color: #999;
+  font-size: 0.75rem;
+}
+
+tabs > tab-links > tab[selected] {
+  border-bottom-width: 3px;
+  opacity: 1;
+}
+
+tabs > tab-links > tab:hover {
+  opacity: 0.75;
+}
+
+tabs > tab-content {
+  flex: 1;
+  background: #fff;
+  padding: 15px;
+}
+
+tabs > tab-content > * {
+  display: none;
+}
+
+tabs > tab-content > [selected] {
+  display: block;
+}

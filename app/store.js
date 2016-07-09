@@ -1,9 +1,9 @@
-import rdxStore from './utils/rdxStore';
+import { sugarStore } from 'redux-sugar-store/dist/index';
 
 import { buildClientSchema } from 'graphql';
 import SERVER from './server';
 
-const store = rdxStore({
+const store = sugarStore({
       schema: null,
       loading: false
     }, [

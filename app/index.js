@@ -12,11 +12,6 @@ import HomePage from './pages/Home';
 import TypePage from './pages/Type';
 import Error404 from './pages/Error404';
 
-
-import { createStore } from 'redux';
-
-const _store = createStore((state, action) => state, { schema: {} });
-
 // LOAD THE SCHEME
 store.loadSchema();
 

@@ -3,34 +3,44 @@ import './styles.less'
 import ReactDOM from 'react-dom';
 import React from 'react';
 
-import store from './store';
+//import store from './store';
 
 import { Router, Route, browserHistory } from 'react-router';
 import { connect, Provider } from 'react-redux';
 
-import HomePage from './pages/Home';
-import TypePage from './pages/Type';
+import DashboardPage from './pages/Dashboard';
+import ExplorerPage from './pages/Explorer';
+import QueriesPage from './pages/Queries';
+import EntitiesPage from './pages/Entities';
+import SchemaPage from './pages/Schema';
+import ConsolePage from './pages/Console';
+import LogsPage from './pages/Logs';
 import Error404 from './pages/Error404';
 
 // LOAD THE SCHEME
-store.loadSchema();
+//store.loadSchema();
 
 // MAKE CONNECTED PAGES
-const HomePageConnected = connect((store) => ({
-  schema: store.schema,
-  loading: store.loading
-}), store.mapStoreToProps)(HomePage);
-
-const TypePageConnected = connect((store) => ({
-  schema: store.schema
-}), store.mapStoreToProps)(TypePage);
+//const HomePageConnected = connect((store) => ({
+//  schema: store.schema,
+//  loading: store.loading
+//}), store.mapStoreToProps)(HomePage);
+//
+//const TypePageConnected = connect((store) => ({
+//  schema: store.schema
+//}), store.mapStoreToProps)(TypePage);
 
 // ROUTES
 const routes =
-    <Provider store={store}>
+    <Provider>
       <Router history={browserHistory}>
-        <Route path="/" component={HomePageConnected}/>
-        <Route path="/types/:type" component={TypePageConnected}/>
+        <Route path="/" component={DashboardPage}/>
+        <Route path="/explorer/" component={ExplorerPage}/>
+        <Route path="/queries/" component={QueriesPage}/>
+        <Route path="/entities/" component={EntitiesPage}/>
+        <Route path="/scheme/" component={SchemaPage}/>
+        <Route path="/console/" component={ConsolePage}/>
+        <Route path="/logs/" component={LogsPage}/>
         <Route path="*" component={Error404}/>
       </Router>
     </Provider>;

@@ -5,9 +5,9 @@ import React from 'react';
 const Component = React.createClass({
   render() {
     return (
-      <cc>
-        <h1>404</h1>
-      </cc>
+      <section>
+        <h1>Page not found</h1>
+      </section>
     );
   }
 });

@@ -22,13 +22,11 @@
     "graphql": "^0.6.0",
     "react": "15.0.2",
     "react-codemirror": "^0.2.6",
-    "react-data-grid": "^0.14.42",
     "react-dom": "15.0.2",
     "react-jsonschema-form": "^0.31.0",
     "react-redux": "^4.4.5",
     "react-router": "^2.4.0",
-    "redux": "^3.5.2",
-    "redux-sugar-store": "^0.1.0"
+    "redux": "^3.5.2"
   },
   "devDependencies": {
     "babel-core": "6.7.6",

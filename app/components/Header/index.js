@@ -1,13 +1,17 @@
 
 import './style.less';
 import React from 'react';
+import MainNav from '../MainNav';
 
 const Component = React.createClass({
+
   render() {
     return (
-      <cc>
-        <h1>404</h1>
-      </cc>
+        <header>
+          <logo></logo>
+          <MainNav />
+          <settings>s</settings>
+        </header>
     );
   }
 });

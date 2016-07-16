@@ -40,6 +40,11 @@ module.exports = {
       }
     ]
   },
+  resolve: {
+    alias: {
+      "ag-grid-root": __dirname + "/node_modules/ag-grid"
+    }
+  },
   plugins: [
     new webpack.HotModuleReplacementPlugin(),
     new webpack.NoErrorsPlugin()

@@ -1,13 +1,14 @@
-import './styles.less'
+//import './styles.less';
 
 import ReactDOM from 'react-dom';
 import React from 'react';
 
 //import store from './store';
 
-import { Router, Route, browserHistory } from 'react-router';
+import { Router, Route, browserHistory, IndexRedirect } from 'react-router';
 import { connect, Provider } from 'react-redux';
 
+import AppPage from './pages/App';
 import DashboardPage from './pages/Dashboard';
 import ExplorerPage from './pages/Explorer';
 import QueriesPage from './pages/Queries';
@@ -17,33 +18,22 @@ import ConsolePage from './pages/Console';
 import LogsPage from './pages/Logs';
 import Error404 from './pages/Error404';
 
-// LOAD THE SCHEME
-//store.loadSchema();
-
-// MAKE CONNECTED PAGES
-//const HomePageConnected = connect((store) => ({
-//  schema: store.schema,
-//  loading: store.loading
-//}), store.mapStoreToProps)(HomePage);
-//
-//const TypePageConnected = connect((store) => ({
-//  schema: store.schema
-//}), store.mapStoreToProps)(TypePage);
-
 // ROUTES
 const routes =
-    <Provider>
-      <Router history={browserHistory}>
-        <Route path="/" component={DashboardPage}/>
-        <Route path="/explorer/" component={ExplorerPage}/>
-        <Route path="/queries/" component={QueriesPage}/>
-        <Route path="/entities/" component={EntitiesPage}/>
-        <Route path="/scheme/" component={SchemaPage}/>
-        <Route path="/console/" component={ConsolePage}/>
-        <Route path="/logs/" component={LogsPage}/>
-        <Route path="*" component={Error404}/>
-      </Router>
-    </Provider>;
+    <Router history={browserHistory}>
+      <Route path="/" component={AppPage}>
+        <IndexRedirect to="/dashboard/" />
+        <Route path="dashboard/" component={DashboardPage} />
+        <Route path="explorer/" component={ExplorerPage} />
+        <Route path="queries/" component={QueriesPage} />
+        <Route path="entities/" component={EntitiesPage} />
+        <Route path="scheme/" component={SchemaPage} />
+        <Route path="console/" component={ConsolePage} />
+        <Route path="logs/" component={LogsPage} />
+        <Route path="*" component={Error404} />
+      </Route>
+      <Route path="*" component={Error404} />
+    </Router>;
 
 // Render
 ReactDOM.render(routes, document.getElementById('main'));

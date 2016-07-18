@@ -3,40 +3,33 @@
 import ReactDOM from 'react-dom';
 import React from 'react';
 
-//import store from './store';
+import store from './store';
 
 import { Router, Route, browserHistory, IndexRedirect } from 'react-router';
 import { connect, Provider } from 'react-redux';
 
 import AppPage from './pages/App';
-import DashboardPage from './pages/Dashboard';
-import ExplorerPage from './pages/Explorer';
-import QueriesPage from './pages/Queries';
-import EntitiesPage from './pages/Entities';
-import SchemaPage from './pages/Schema';
-import ConsolePage from './pages/Console';
-import LogsPage from './pages/Logs';
 import Error404 from './pages/Error404';
 
+const state = store.getState();
+
 // ROUTES
-const routes =
-    <Router history={browserHistory}>
-      <Route path="/" component={AppPage}>
-        <IndexRedirect to="/dashboard/" />
-        <Route path="dashboard/" component={DashboardPage} />
-        <Route path="explorer/" component={ExplorerPage} />
-        <Route path="queries/" component={QueriesPage} />
-        <Route path="entities/" component={EntitiesPage} />
-        <Route path="scheme/" component={SchemaPage} />
-        <Route path="console/" component={ConsolePage} />
-        <Route path="logs/" component={LogsPage} />
+const router =
+    <Provider store={store}>
+      <Router history={browserHistory}>
+        <Route path="/" component={AppPage}>
+          <IndexRedirect to={ state.routes.index } />
+          { state.routes.paths.map(function(route){
+            return <Route path={route.path} component={route.component} key={route.path} />;
+          }) }
+          <Route path="*" component={Error404} />
+        </Route>
         <Route path="*" component={Error404} />
-      </Route>
-      <Route path="*" component={Error404} />
-    </Router>;
+      </Router>
+    </Provider>;
 
 // Render
-ReactDOM.render(routes, document.getElementById('main'));
+ReactDOM.render(router, document.getElementById('main'));
 
 
 //import Form from "react-jsonschema-form";

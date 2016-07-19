@@ -12,13 +12,13 @@ const initState = {
   routes: {
     index: '/dashboard/',
     paths: [
-      { path: '/dashboard',  component: DashboardPage, label: 'Dashboard' },
-      { path: "/explorer/",  component: ExplorerPage,  label: 'Explorer' },
-      { path: "/queries/",   component: QueriesPage,   label: 'Queries' },
-      { path: "/entities/",  component: EntitiesPage,  label: 'Entities' },
-      { path: "/scheme/",    component: SchemaPage,    label: 'Scheme' },
-      { path: "/console/",   component: ConsolePage,   label: 'Console' },
-      { path: "/logs/",      component: LogsPage,      label: 'Logs' }
+      { path: '/dashboard', component: DashboardPage, label: 'Dashboard' },
+      { path: "/explorer/", component: ExplorerPage, label: 'Explorer' },
+      { path: "/queries/", component: QueriesPage, label: 'Queries' },
+      { path: "/entities/", component: EntitiesPage, label: 'Entities' },
+      { path: "/scheme/", component: SchemaPage, label: 'Scheme' },
+      { path: "/console/", component: ConsolePage, label: 'Console' },
+      { path: "/logs/", component: LogsPage, label: 'Logs' }
     ]
   }
 };

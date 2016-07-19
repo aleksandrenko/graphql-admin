@@ -18,13 +18,13 @@ const router =
     <Provider store={store}>
       <Router history={browserHistory}>
         <Route path="/" component={AppPage}>
-          <IndexRedirect to={ state.routes.index } />
-          { state.routes.paths.map(function(route){
-            return <Route path={route.path} component={route.component} key={route.path} />;
+          <IndexRedirect to={ state.routes.index }/>
+          { state.routes.paths.map(function (route) {
+            return <Route path={route.path} component={route.component} key={route.path}/>;
           }) }
-          <Route path="*" component={Error404} />
+          <Route path="*" component={Error404}/>
         </Route>
-        <Route path="*" component={Error404} />
+        <Route path="*" component={Error404}/>
       </Router>
     </Provider>;
 

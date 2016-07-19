@@ -6,6 +6,41 @@ import 'ag-grid-root/dist/styles/theme-fresh.css';
 import React from 'react';
 
 import {AgGridReact} from 'ag-grid-react';
+import {Tabs, Tab} from 'react-draggable-tab';
+
+const tabsClassNames = {
+  tabWrapper: 'myWrapper',
+  tabBar: 'myTabBar',
+  tabBarAfter: 'myTabBarAfter',
+  tab: 'myTab',
+  tabTitle: 'myTabTitle',
+  tabCloseIcon: 'tabCloseIcon',
+  tabBefore: 'myTabBefore',
+  tabAfter: 'myTabAfter'
+};
+
+const tabsStyles = {
+  tabWrapper: { marginTop: '10px' },
+  tabBar: {},
+  tab: {},
+  tabTitle: {},
+  tabCloseIcon: {},
+  tabBefore: {},
+  tabAfter: {}
+};
+
+var tabs = [
+  (<Tab key={'tab0'} title={'ONE'}>
+    <div>
+      <h1>This tab cannot close</h1>
+    </div>
+  </Tab>),
+  (<Tab key={'tab1'} title={'TWO'}>
+    <div>
+      <h1>This is tab1</h1>
+    </div>
+  </Tab>)
+];
 
 
 var gridOptions = {
@@ -40,6 +75,25 @@ const Component = React.createClass({
   render() {
     return (
         <section>
+          <Tabs
+              tabsClassNames={tabsClassNames}
+              tabsStyles={tabsStyles}
+              //selectedTab={this.state.selectedTab ? this.state.selectedTab : "tab2"}
+              //onTabSelect={this.handleTabSelect.bind(this)}
+              //onTabClose={this.handleTabClose.bind(this)}
+              //onTabAddButtonClick={this.handleTabAddButtonClick.bind(this)}
+              //onTabPositionChange={this.handleTabPositionChange.bind(this)}
+              tabs={tabs}
+              shortCutKeys={
+                {
+                  'close': ['alt+command+w', 'alt+ctrl+w'],
+                  'create': ['alt+command+t', 'alt+ctrl+t'],
+                  'moveRight': ['alt+command+tab', 'alt+ctrl+tab'],
+                  'moveLeft': ['shift+alt+command+tab', 'shift+alt+ctrl+tab']
+                }
+              }
+              />
+
           <div className="ag-fresh">
             <AgGridReact
                 // listen for events with React callbacks

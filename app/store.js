@@ -1,8 +1,3 @@
-//import { sugarStore } from 'redux-sugar-store/dist/index';
-
-//import { buildClientSchema } from 'graphql';
-//import SERVER from './server';
-
 import { createStore } from 'redux'
 
 import DashboardPage from './pages/Dashboard';
@@ -27,8 +22,10 @@ const initState = {
     ]
   }
 };
+
 const rootReducer = (state, action) => state;
 
-const store = createStore(rootReducer, initState);
+const devToolsExtension = window.devToolsExtension && window.devToolsExtension();
+const store = createStore(rootReducer, initState, devToolsExtension);
 
 export default store;

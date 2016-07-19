@@ -1,2 +1,1 @@
-# apollo-cc
-Apollo Control Center
+# Control Center

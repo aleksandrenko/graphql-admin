@@ -4,8 +4,6 @@ import schemaUtils from './schema';
 const fromObjectToQuery = (entity, schema) => {
   const type = schemaUtils.getType(entity);
 
-  console.log('');
-
 
   const query = `query {
     ${entity.name} {

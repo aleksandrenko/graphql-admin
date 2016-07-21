@@ -6,7 +6,7 @@ const SRC_FOLDER = path.resolve(__dirname, sourceFilelFolder);
 
 module.exports = {
   entry: {
-    vendors: ['react', 'react-dom', 'react-redux', 'redux'],
+    vendors: ['react', 'react-dom', 'react-redux', 'redux', 'd3'],
     components: ['ag-grid', 'ag-grid-react', 'react-draggable-tab'],
     app: ['./' + sourceFilelFolder + '/index.js']
   },

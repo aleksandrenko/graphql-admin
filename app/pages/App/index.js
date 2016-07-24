@@ -23,7 +23,9 @@ const Component = React.createClass({
             </nav>
             <settings>s</settings>
           </header>
-          { this.props.children }
+          <main>
+            { this.props.children }
+          </main>
         </cc>
     );
   }

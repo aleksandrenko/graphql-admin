@@ -6,18 +6,26 @@ import React from 'react';
 import store from './store';
 
 import { Router, Route, browserHistory, IndexRedirect } from 'react-router';
-import { Provider } from 'react-redux';
+import { connect, Provider } from 'react-redux';
 
 import AppPage from './pages/App';
 import Error404 from './pages/Error404';
 
 const state = store.getState();
 
+const AppPageConnected = connect((state) => {
+  return {
+    routes: state.routes,
+    inConfigMode: state.inConfigMode,
+    config: state.config
+  }
+}, (dispatcher) => ({}))(AppPage);
+
 // ROUTES
 const router =
     <Provider store={store}>
       <Router history={browserHistory}>
-        <Route path="/" component={AppPage}>
+        <Route path="/" component={AppPageConnected}>
           <IndexRedirect to={ state.routes.index }/>
           { state.routes.paths.map(function (route) {
             return <Route path={route.path} component={route.component} key={route.path}/>;

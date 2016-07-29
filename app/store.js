@@ -13,12 +13,16 @@ import SchemaPage from './pages/Schema';
 import ConsolePage from './pages/Console';
 import LogsPage from './pages/Logs';
 
-// MAKE CONNECTED COMP
-const EntitiesPageConnected = connect((_store) => ({
-  schema: _store.schema
-}), actions)(EntitiesPage);
+// MAKE CONNECTED COMPONENTS
+const EntitiesPageConnected = connect((store) => ({
+  schema: store.schema
+}), (dispatcher) => ({}))(EntitiesPage);
 
 const INITIAL_STATE = {
+  inConfigMode: true,
+  config: {
+    graphql_url: ''
+  },
   routes: {
     index: '/dashboard/',
     paths: [

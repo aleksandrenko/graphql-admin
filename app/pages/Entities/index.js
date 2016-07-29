@@ -1,8 +1,6 @@
 import './style.less';
 import React from 'react';
 
-import store from '../../store';
-
 const Component = React.createClass({
   propTypes: {
     schema: React.PropTypes.object

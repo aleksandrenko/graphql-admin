@@ -6,7 +6,7 @@ import React from 'react';
 import store from './store';
 
 import { Router, Route, browserHistory, IndexRedirect } from 'react-router';
-import { connect, Provider } from 'react-redux';
+import { Provider } from 'react-redux';
 
 import AppPage from './pages/App';
 import Error404 from './pages/Error404';

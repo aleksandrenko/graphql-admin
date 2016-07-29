@@ -1,10 +1,15 @@
 import './style.less';
 import React from 'react';
 
+import TestD3 from '../../components/d3'
+
 const Component = React.createClass({
   render() {
     return (
-        <h1>Queries</h1>
+        <section>
+          <h1>Queries</h1>
+          <TestD3 />
+        </section>
     );
   }
 });

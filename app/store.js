@@ -19,7 +19,7 @@ const EntitiesPageConnected = connect((store) => ({
 }), (dispatcher) => ({}))(EntitiesPage);
 
 const INITIAL_STATE = {
-  inConfigMode: true,
+  inConfigMode: false,
   config: {
     graphql_url: ''
   },

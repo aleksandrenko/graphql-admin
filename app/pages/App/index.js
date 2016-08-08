@@ -1,4 +1,6 @@
 import './style.less';
+import './c3js.less';
+
 import React from 'react';
 import { Link } from 'react-router';
 import Icon from '../../components/Icon';

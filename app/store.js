@@ -18,6 +18,10 @@ const EntitiesPageConnected = connect((store) => ({
   schema: store.schema
 }), (dispatcher) => ({}))(EntitiesPage);
 
+const QueriesPageConnected = connect((store) => ({
+  schema: store.schema
+}), (dispatcher) => ({}))(QueriesPage);
+
 const INITIAL_STATE = {
   inConfigMode: false,
   config: {
@@ -28,7 +32,7 @@ const INITIAL_STATE = {
     paths: [
       { path: '/dashboard', component: DashboardPage, label: 'Dashboard' },
       { path: "/explorer/", component: ExplorerPage, label: 'Explorer' },
-      { path: "/queries/", component: QueriesPage, label: 'Queries' },
+      { path: "/queries/", component: QueriesPageConnected, label: 'Queries' },
       { path: "/entities/", component: EntitiesPageConnected, label: 'Entities' },
       { path: "/scheme/", component: SchemaPage, label: 'Scheme' },
       { path: "/console/", component: ConsolePage, label: 'Console' },

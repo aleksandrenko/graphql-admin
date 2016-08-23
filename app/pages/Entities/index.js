@@ -13,12 +13,22 @@ const Component = React.createClass({
     };
   },
   render() {
+    var grapqhlNativeTypes = ["Query", "ID", "String", "Query", "__Schema", "__Type", "__TypeKind", "Boolean", "__Field", "__InputValue", "__EnumValue", "__Directive", "__DirectiveLocation"];
+    var filteredTypes = this.props.schema.types.filter((type) => {
+      return grapqhlNativeTypes.indexOf(type.name) === -1
+    });
+
     return (
         <section>
           <h1>Entities</h1>
+
+          { this.props.schema.types.length === 0 &&
+            <div>No types loaded, check the endpoint.</div>
+          }
+
           <list>
           {
-            this.props.schema.types.map(function(type) {
+            filteredTypes.map(function(type) {
               return <item className="entities">
                 <aside>
                   <count>??</count>

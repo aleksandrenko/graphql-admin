@@ -5,7 +5,9 @@
   "main": "/app/index.js",
   "scripts": {
     "start": "webpack-dev-server --config webpack.config.js --progress --colors --history-api-fallback",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
   },
   "repository": {
     "type": "git",
@@ -30,7 +32,8 @@
     "react-faux-dom": "^2.7.1",
     "react-redux": "4.4.5",
     "react-router": "2.4.0",
-    "redux": "3.5.2"
+    "redux": "3.5.2",
+    "snyk": "^1.189.0"
   },
   "devDependencies": {
     "babel-core": "6.7.6",
@@ -47,5 +50,6 @@
     "style-loader": "0.13.1",
     "webpack": "1.12.15",
     "webpack-dev-server": "1.14.1"
-  }
+  },
+  "snyk": true
 }

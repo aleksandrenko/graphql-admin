@@ -20,7 +20,7 @@
   "dependencies": {
     "ag-grid": "5.0.3",
     "ag-grid-react": "5.0.0",
-    "d3": "4.1.1",
+    "d3": "7.0.0",
     "graphiql": "^0.7.3",
     "graphql": "^0.6.2",
     "react": "15.0.2",

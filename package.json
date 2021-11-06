@@ -21,7 +21,7 @@
     "ag-grid": "5.0.3",
     "ag-grid-react": "5.0.0",
     "d3": "4.1.1",
-    "graphiql": "^0.7.3",
+    "graphiql": "^1.4.7",
     "graphql": "^0.6.2",
     "react": "15.0.2",
     "react-c3js": "^0.1.7",
